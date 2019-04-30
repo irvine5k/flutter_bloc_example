@@ -17,7 +17,12 @@ class Bloc with Validators {
   Function(String) get changePassword => _password.sink.add;
 
   submit(){
+    // Recovering data from BehaviorSubject
+    final validEmail = _email.value;
+    final validPassword = _password.value;
 
+    print('Email is $validEmail');
+    print('Password is $validPassword');
   }
 
   // Close streams
